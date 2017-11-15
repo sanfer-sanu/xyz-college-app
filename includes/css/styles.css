@@ -1,0 +1,23 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Sanfer S
+Updated: October 2017
+Notes:	 Hand coded for suhailandroidproject.com
+
+*/
+
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+#submit {
+    cursor: pointer;
+}
+
+#error {
+    display: none;
+}
