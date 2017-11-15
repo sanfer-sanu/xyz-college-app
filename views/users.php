@@ -26,7 +26,7 @@ $jsonTable = $_SESSION['usersTable'];
         <table id="table" class="mt-3" data-height="400">
             <thead class="thead-default">
                 <tr>
-                    <th class="text-center" data-field="reg_id">Registation Id</th>
+                    <th class="text-center" data-field="Reg_ID">Registation Id</th>
                     <th class="text-center" data-field="name">Name</th>
                     <th class="text-center" data-field="username">Username</th>
                     <th class="text-center" data-field="age">Age</th>
