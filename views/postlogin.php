@@ -13,7 +13,7 @@
       <a class="nav-link" href="/suhailproject/includes/php/users.php">Users</a>
     </li>
     <li class="nav-item ml-lg-2 ml-md-2 ml-sm-0">
-      <a class="nav-link" href="/suhailproject">Department</a>
+      <a class="nav-link" href="/suhailproject/views/fileupload.php">Questions</a>
     </li>
   </ul>
   <form class="form-inline my-2 my-lg-0" action="/suhailproject/includes/php/logout.php" method="POST">
