@@ -69,6 +69,12 @@ $jsonTable = $_SESSION['notices'];
             </table>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-12">
+            Include the page information
+        </div>
+    </div>
     
     
     <div class="alert alert-danger alert-dismissible show fade hidden" role="alert">
