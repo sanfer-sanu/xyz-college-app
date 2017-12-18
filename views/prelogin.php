@@ -5,7 +5,7 @@
   <a class="navbar-brand" href="/plexus">Plexus</a>
 
   <div class="collapse navbar-collapse justify-content-end pb-lg-0 pb-sm-5" id="navbarSupportedContent">
-        <form class="form-inline ml-lg-5 ml-sm-0" action="includes/php/login.php" method="POST" autocomplete="off">
+        <form class="form-inline ml-lg-5 ml-sm-0" action="/plexus/includes/php/login.php" method="POST" autocomplete="off">
             <!-- <div id="error" class="form-control alert alert-danger mr-2 mt-2" role="alert"></div> -->
             <input class="form-control mr-2" type="text" placeholder="Username" id="username" name="username">
             <input class="form-control mr-2" type="password" placeholder="Password" id="password" name="password">
