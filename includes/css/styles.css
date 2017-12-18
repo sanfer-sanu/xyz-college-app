@@ -14,7 +14,7 @@ Notes:	 Hand coded for suhailandroidproject.com
    Layout
    -------------------------------------- */
 
-#submit {
+#submit, #btnDelete, #btnUpload, #btnLogout {
     cursor: pointer;
 }
 

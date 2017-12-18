@@ -7,15 +7,8 @@ $jsonTable = $_SESSION['usersTable'];
 
 <script type="text/javascript">
     $(document).ready(function() {
-            $('#table').bootstrapTable({
-                data: <?php echo $jsonTable; ?>,    
-                striped: false,
-                pagination: true,
-                search: false,
-                pageSize: 20,
-                pageList: [20, 40, 60, 100, 200],
-                minimumCountColumns: 2,
-                clickToSelect: true
+            $('#userTable').DataTable({
+                
             });
 
     }); //document.ready
@@ -23,8 +16,8 @@ $jsonTable = $_SESSION['usersTable'];
 
 <div class="container">
     <div class="mt-lg-3 mt-sm-1">
-        <table id="table" class="mt-3" data-height="400">
-            <thead class="thead-default">
+        <table id="userTable" class="table table-bordered table-hover" width="100%" data-height="400">
+            <thead class="thead-light">
                 <tr>
                     <th class="text-center" data-field="Reg_ID">Registation Id</th>
                     <th class="text-center" data-field="name">Name</th>
@@ -32,6 +25,23 @@ $jsonTable = $_SESSION['usersTable'];
                     <th class="text-center" data-field="age">Age</th>
                 </tr>
             </thead>
+            <tbody class="text-center">
+            <?php 
+                if(!empty($jsonTable)) {
+                    foreach($jsonTable as $user) {
+                        ?>
+                        <tr>
+                            <td> <?php echo $user['Reg_ID']; ?> </td>
+                            <td> <?php echo $user['name']; ?> </td>
+                            <td> <?php echo $user['username']; ?> </td>
+                            <td> <?php echo $user['age']; ?> </td>
+                        </tr>
+                        <?php
+                    }
+                }
+             ?>
+            </tbody>
+                
         </table>
     </div>
 </div>

@@ -13,7 +13,7 @@ if(isset($_POST['submit'])) {
     //Error Handling
     //Check if input values are empty
     if(empty($username) || empty($password)) {
-        header("Location: ../../index.php?login=empty");
+        header("Location: /plexus/index.php?login=empty");
         exit();
       } else {
         $sql = "SELECT * FROM admin where user_name='$username'";
@@ -21,7 +21,7 @@ if(isset($_POST['submit'])) {
         $resultCheck = mysqli_num_rows($result);
     
         if($resultCheck < 1) {
-          header("Location: ../../index.php?login=noresult");
+          header("Location: /plexus/index.php?login=noresult");
           exit();
 
         } else {
@@ -31,7 +31,7 @@ if(isset($_POST['submit'])) {
             //De-hasing the password
             $hashedPwdCheck = password_verify($password, $row['password']);
             if($hashedPwdCheck == false) {
-              header("Location: ../../index.php?login=passworderr");
+              header("Location: /plexus/index.php?login=passworderr");
               exit();
             } elseif ($hashedPwdCheck == true) {
               //Login the user here
@@ -40,7 +40,7 @@ if(isset($_POST['submit'])) {
               $_SESSION['u_last'] = $row['last_name'];
               $_SESSION['u_email'] = $row['email'];
               $_SESSION['u_uid'] = $row['user_name'];
-              header("Location: ../../index.php?login=success");
+              header("Location: /plexus/index.php?login=success");
               exit();
             }
           }
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])) {
       }  
       
 } else {
-    header("Location: ../../index.php");
+    header("Location: /plexus/index.php");
     exit();
 }
 ?>

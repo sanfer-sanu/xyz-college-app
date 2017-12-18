@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-//if(isset($_POST['users'])) {
     //Include the connection file
     include '../dao/dao.php';
 
@@ -11,7 +10,7 @@ session_start();
     $resultCheck = mysqli_num_rows($result);
 
     if($resultCheck < 1) {
-        header("Location: ../..index.php?users=empty");
+        header("Location: /plexus/index.php?users=empty");
         exit();
     } else {
         while($rows = mysqli_fetch_array($result)){
@@ -19,18 +18,10 @@ session_start();
             $table[] = $rows;
         }
         
-        $jsonTable = json_encode($table);
-        $_SESSION['usersTable'] = $jsonTable;
+        $_SESSION['usersTable'] = $table;
 
         header("Location: ../../views/users.php");
         exit();
     }
-
-/*
-} else {
-    header("Location: ../../index.php");
-    exit();
-}
-*/
 
 ?>

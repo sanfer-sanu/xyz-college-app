@@ -37,3 +37,34 @@ $(document).ready(function(){
     */
 
 }); //end ready-function
+
+function deleteFile(id, filename, type) {
+
+    if(filename != null || filename != '') {
+        if(confirm('Are you sure you want to delete the selected file?')) {
+            $.ajax({
+                url:'/plexus/includes/php/delete.php',
+                type: 'POST',
+                data: {
+                    filename: filename,
+                    type: type
+                },
+                success: function(data) {
+                    if(data == 'Qsuccess') {
+                        alert("File Deteted Successfully!");
+                        window.location.href= '/plexus/includes/php/questions.php';
+                    } else if(data == 'Ssuccess') {
+                        alert("File Deteted Successfully!");
+                        window.location.href= '/plexus/includes/php/syllabus.php';
+                    } else {
+                        alert("There is an error deleting this file. Please contact the admin support!");
+                        console.log(data);
+                    }
+                }
+        
+            });
+        }
+    }
+    
+    
+}

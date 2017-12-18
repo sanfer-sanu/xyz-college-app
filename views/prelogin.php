@@ -2,7 +2,7 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/suhailproject">XYZ College</a>
+  <a class="navbar-brand" href="/plexus">Plexus</a>
 
   <div class="collapse navbar-collapse justify-content-end pb-lg-0 pb-sm-5" id="navbarSupportedContent">
         <form class="form-inline ml-lg-5 ml-sm-0" action="includes/php/login.php" method="POST" autocomplete="off">
