@@ -87,8 +87,9 @@ $jsonTable = $_SESSION['notices'];
 
     <br/>
     <div class="row">
-        <div class="col-12">
-            <textarea name="txtNotice" id="txtNotice" cols="121" rows="6"></textarea>
+        <div class="col-12 form-group">
+            <textarea class="form-control" name="txtNotice" id="txtNotice" cols="121" rows="6"></textarea>
+        
             <button id="btnAdd" name="btnAdd" class="btn btn-primary float-right" >Add Notice </button>
         </div>
     </div>
