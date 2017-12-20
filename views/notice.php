@@ -22,20 +22,23 @@ $jsonTable = $_SESSION['notices'];
                     return false;
                 } else {
                     $.ajax({
-                        url: '/plexus/includes/php/notice.php',
+                        url: '/plexus/includes/php/notices.php',
                         type: 'POST',
                         data: {
                                 input: input
                             },
                         success: function(data){
-                            console.log(data);
+                            if(data == 'success'){
+                                alert('Notice added successfully!');
+                                window.location.href = '/plexus/includes/php/notice.php';
+                            }
 
                         }
                     });
                 }
-
-                
             });
+
+            
 
     }); //document.ready
 </script>
@@ -58,7 +61,7 @@ $jsonTable = $_SESSION['notices'];
                             ?>
                             <tr>
                                 <td><?php echo $notice['Information']; ?></td>
-                                <td><button class="btn btn-primary btn-sm">Delete</button>
+                                <td><button class="btn btn-primary btn-sm" onclick="deleteNotice('<?php echo $notice['NoticeID'] ?>');">Delete</button>
                             </tr>
                             <?php
                         }
@@ -70,9 +73,9 @@ $jsonTable = $_SESSION['notices'];
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-12">
-            Include the page information
+            Notices you add here will appear on the app notice section and summary above as well.
         </div>
     </div>
     
@@ -90,7 +93,7 @@ $jsonTable = $_SESSION['notices'];
         <div class="col-12 form-group">
             <textarea class="form-control" name="txtNotice" id="txtNotice" cols="121" rows="6"></textarea>
         
-            <button id="btnAdd" name="btnAdd" class="btn btn-primary float-right" >Add Notice </button>
+            <button id="btnAdd" name="btnAdd" class="btn btn-primary mt-2 float-right">Add Notice </button>
         </div>
     </div>
 </div>

@@ -1,7 +1,6 @@
 <?php
-session_start();
+    session_start();
 
-//if(isset($_POST['users'])) {
     //Include the connection file
     include '../dao/dao.php';
 
@@ -25,7 +24,6 @@ session_start();
         $_SESSION['uploadsTable'] = $table;
 
         header("Location: ../../views/syllabus.php");
-        
     }
 
 ?>

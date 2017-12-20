@@ -1,5 +1,3 @@
-
-
 //jQuery function calls
 $(document).ready(function(){
     $('#submit').click(function(){
@@ -17,25 +15,6 @@ $(document).ready(function(){
             return false;
         }
     });
-
-    /*
-    $('#users-nav').click(function(){
-        $.ajax({
-            url : 'includes/php/users.php',
-            type: 'POST',
-            data: {
-                action : 'users'
-            },
-            dataType: 'json',
-            success: function( json ){
-                alert("Success");
-            }
-
-        });
-
-    });
-    */
-
 }); //end ready-function
 
 function deleteFile(id, filename, type) {
@@ -61,10 +40,25 @@ function deleteFile(id, filename, type) {
                         console.log(data);
                     }
                 }
-        
             });
         }
     }
-    
-    
+}
+
+function deleteNotice(id) {
+    $.ajax({
+        url: '/plexus/includes/php/notices.php',
+        type: 'POST',
+        data: {
+                delete: id
+        },
+        success: function(data){
+            console.log(data);
+            if(data == 'success'){
+                alert('Notice deleted successfully!');
+                window.location.href = '/plexus/includes/php/notice.php';
+            }
+
+        }
+    });
 }

@@ -21,6 +21,9 @@
     <li class="nav-item ml-lg-2 ml-md-2 ml-sm-0">
       <a class="nav-link" href="/plexus/includes/php/notice.php">Notices</a>
     </li>
+    <li class="nav-item ml-lg-2 ml-md-2 ml-sm-0">
+      <a class="nav-link" href="/plexus/includes/php/timetable.php">Time Tables</a>
+    </li>
   </ul>
   <form class="form-inline my-2 my-lg-0" action="/plexus/includes/php/logout.php" method="POST">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnLogout" name="submit">Log Out</button>

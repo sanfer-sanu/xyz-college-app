@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 
     //Include the connection file
     include '../dao/dao.php';
@@ -17,11 +17,10 @@ session_start();
             
             $table[] = $rows;
         }
-        
         $_SESSION['usersTable'] = $table;
 
         header("Location: ../../views/users.php");
-        exit();
+
     }
 
 ?>

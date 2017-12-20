@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 
     //Include the connection file
     include '../dao/dao.php';
@@ -17,24 +17,11 @@ session_start();
             
             $table[] = $rows;
         }
-        
         //$jsonTable = json_encode($table);
         $_SESSION['notices'] = $table;
 
         header("Location: ../../views/notice.php");
         exit();
-    }
-
-    if(isset($_POST['input'])){
-        $noticeInfo = $_POST['input'];
-
-        $add = $conn->prepare("insert into Notice (Information) values ($noticeInfo) ");
-        if(mysqli_execute($add)) {
-            echo "success";
-        }
-        
-    } else {
-        echo "failure";
     }
 
 ?>

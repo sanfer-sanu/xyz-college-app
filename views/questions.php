@@ -135,7 +135,7 @@ if(isset($_FILES ['uploadFile'])){
                     <div class="pl-0 col-6">
                         <div class="alert alert-success" role="alert">
                             <strong>Success!</strong> File uploaded successfully!
-                            <button class="btn btn-success btn-sm float-right" type="button" id="btnRefresh" name="btnRefresh" onclick="window.location.href='/plexus/views/questions.php';">
+                            <button class="btn btn-success btn-sm float-right" type="button" id="btnRefresh" name="btnRefresh" onclick="window.location.href='/plexus/includes/php/questions.php';">
                             <span class=""> Refresh</span>
                             </button>
                         </div>

@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 
     //Include the connection file
     include '../dao/dao.php';
@@ -22,8 +22,7 @@ session_start();
         $jsonUploads = json_encode($table);
         $_SESSION['uploadsTable'] = $table;
 
-        header("Location: ../../views/questions.php");
-        
+        header("Location: ../../views/questions.php");  
     }
 
 ?>
