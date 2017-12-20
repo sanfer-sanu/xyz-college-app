@@ -41,7 +41,6 @@ if(isset($_POST['submit'])) {
             $_SESSION['u_email'] = $row['email'];
             $_SESSION['u_uid'] = $row['user_name'];
             header("Location: /plexus/index.php?login=success");
-            exit();
           }
         }
       }

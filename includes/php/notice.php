@@ -21,7 +21,7 @@
         $_SESSION['notices'] = $table;
 
         header("Location: ../../views/notice.php");
-        exit();
+
     }
 
 ?>

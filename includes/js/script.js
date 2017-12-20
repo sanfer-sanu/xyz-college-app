@@ -15,6 +15,10 @@ $(document).ready(function(){
             return false;
         }
     });
+
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    });
 }); //end ready-function
 
 function deleteFile(id, filename, type) {
